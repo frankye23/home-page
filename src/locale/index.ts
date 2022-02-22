@@ -1,9 +1,9 @@
 /*
  * @Author: yedaf
  * @Date: 2022-02-22 09:21:41
- * @LastEditTime: 2022-02-22 13:46:29
- * @LastEditors: yedaf
- * @Description: 
+ * @LastEditTime: 2022-02-22 16:18:07
+ * @LastEditors: your name
+ * @Description: yedaf
  * @FilePath: \home-page\src\locale\index.ts
  * 可以输入预定的版权声明、个性签名、空行等
  */
@@ -11,9 +11,6 @@ import type { App } from 'vue';
 import type { I18n, I18nOptions } from 'vue-i18n';
 
 import { createI18n } from 'vue-i18n';
-
-
-
 
 export let i18n: ReturnType<typeof createI18n>;
 
@@ -34,3 +31,4 @@ export async function setupI18n(app: App) {
   i18n = createI18n(options) as I18n;
   app.use(i18n);
 }
+                                            

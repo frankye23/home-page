@@ -1,7 +1,7 @@
 <!--
  * @Author: yedaf
  * @Date: 2022-02-21 14:15:20
- * @LastEditTime: 2022-02-22 14:13:06
+ * @LastEditTime: 2022-02-22 17:57:11
  * @LastEditors: your name
  * @Description: 头部组件
 -->
@@ -16,14 +16,40 @@
                 <div class="header-nav">
                     <navMenu></navMenu>
                     <div class="search">
-                        <el-icon :size="20"><mouse /></el-icon>
+                        <el-icon :size="20">
+                            <mouse />
+                        </el-icon>
                     </div>
                     <div class="bell">
                         <el-icon :size="20">
                             <search />
                         </el-icon>
                     </div>
-                    <div class="global"><el-icon :size="20"><orange /></el-icon></div>
+                    <div class="global">
+                        <el-popover trigger="hover" width="300">
+                            <template #reference>
+                                <el-icon :size="20">
+                                    <orange />
+                                </el-icon>
+                            </template>
+                            <el-menu
+                                class="lang-menu"
+                                :default-active="language"
+                                @select="handleLang"
+                            >
+                                <el-menu-item
+                                    v-for="item in langList"
+                                    :key="item.value"
+                                    :index="item.value"
+                                >
+                                    <svg class="icon" aria-hidden="true">
+                                        <use :xlink:href="item.symbol" />
+                                    </svg>
+                                    {{ item.label }}
+                                </el-menu-item>
+                            </el-menu>
+                        </el-popover>
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,6 +57,47 @@
 </template>
 <script lang="ts" setup>
 import navMenu from '../header/NavMenu.vue'
+// import useStore from '@/store/index.js'
+const language = 'language'
+const langList = [{
+    value: 'zh-CN',
+    label: '简体中文',
+    symbol: '#icon-zhongguo'
+},
+{
+    value: 'en',
+    label: 'English',
+    symbol: '#icon-meiguo'
+},
+{
+    value: 'ru-Ru',
+    label: 'русский',
+    symbol: '#icon-eluosi'
+}]
+const token = 'aaa'
+const setLanguage = (lang: any) => {
+    localStorage.setItem('language', lang)
+    // this.$store.dispatch('setLanguage', lang)
+    // this.$i18n.locale = lang
+}
+const handleLang = (lang: any) => {
+    const data = {
+        lang
+    }
+    if (token) {
+        if (token) {
+            // usersSettings(data).then(() => {
+            setLanguage(lang)
+            // })
+        }
+        // else {
+        //     this.setLanguage(lang)
+        // }
+    } else {
+        // this.setLanguage(lang)
+    }
+
+}
 </script>
 
 <style lang="scss" scoped>
