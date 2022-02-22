@@ -1,7 +1,7 @@
 <!--
  * @Author: yedaf
  * @Date: 2022-02-21 14:15:20
- * @LastEditTime: 2022-02-21 17:55:26
+ * @LastEditTime: 2022-02-22 14:13:06
  * @LastEditors: your name
  * @Description: 头部组件
 -->
@@ -15,9 +15,15 @@
                 </router-link>
                 <div class="header-nav">
                     <navMenu></navMenu>
-                    <div class="search">1</div>
-                    <div class="bell">2</div>
-                    <div class="global">3</div>
+                    <div class="search">
+                        <el-icon :size="20"><mouse /></el-icon>
+                    </div>
+                    <div class="bell">
+                        <el-icon :size="20">
+                            <search />
+                        </el-icon>
+                    </div>
+                    <div class="global"><el-icon :size="20"><orange /></el-icon></div>
                 </div>
             </div>
         </div>
