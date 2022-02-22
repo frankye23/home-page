@@ -1,0 +1,469 @@
+body {
+    height: 100%;
+    font-size: 14px;
+    margin: 0 !important;
+    padding: 0 !important;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: Roboto Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+      Microsoft YaHei, Arial, sans-serif;
+    color: #444444;
+    margin: 0 auto !important;
+  }
+  
+  html,
+  body {
+    overflow: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    height: 100%;
+  }
+  
+  ul,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #line-chart {
+    padding-top: 20px;
+  }
+  
+  .container {
+    max-width: 1194px;
+    margin: 0 auto;
+  }
+  
+  .pull-right {
+    float: right;
+  }
+  
+  .pull-left {
+    float: left;
+  }
+  
+  .text-center {
+    text-align: center !important;
+  }
+  
+  .text-right {
+    text-align: right !important;
+  }
+  
+  .clearfix {
+    &:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: "";
+      clear: both;
+      height: 0;
+    }
+  }
+  
+  a:link,
+  a:visited,
+  a:active,
+  a:hover {
+    color: #757575;
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  .pagination {
+    text-align: right;
+  }
+  
+  .el-pagination {
+    margin: 50px 0;
+  }
+  
+  .text-blue {
+    color: rgb(22, 159, 197) !important;
+  }
+  
+  .switch-sms-code-button {
+    color: #409eff !important;
+  }
+  
+  .main-background {
+    background-color: #f4f4f4 !important;
+  }
+  
+  .btn-block {
+    width: 100%;
+  }
+  
+  .verify-code {
+    width: 50% !important;
+  }
+  
+  .verify-code-button {
+    margin-left: 3%;
+    width: 46% !important;
+    float: right;
+  }
+  
+  .auth-container .item-select .el-select {
+    width: 100% !important;
+  }
+  
+  .register-title {
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    font-size: 18px;
+    color: #666666;
+    text-align: center;
+  }
+  
+  .header-nav {
+    .el-submenu {
+      &.is-active .el-submenu_title {
+        border-bottom: none;
+      }
+    }
+  
+    .el-menu--horizontal {
+      > .el-menu-item.is-active,
+      > .el-submenu.is-active .el-submenu__title {
+        border-bottom: none;
+      }
+    }
+  
+    .el-menu--horizontal > .el-submenu .el-submenu__title {
+      border-bottom: none;
+      font-size: 16px;
+      font-weight: 500;
+      color: #757575;
+    }
+  
+    .el-menu-item,
+    .el-submenu__title {
+      font-size: 16px;
+      font-weight: 500;
+      color: #757575;
+    }
+  }
+  
+  .section-nav {
+    background: #565a5c;
+  
+    .menu {
+      background-color: transparent;
+  
+      .menu-item {
+        height: 46px !important;
+        line-height: 46px !important;
+        color: #f4f4f4;
+        border-top: 2px solid #565a5c;
+        margin-right: 4px;
+  
+        .menu-item-link {
+          display: block;
+          padding: 0 20px;
+          height: 100%;
+        }
+      }
+    }
+  
+    .el-menu--horizontal {
+      margin: 0 auto;
+      border: none;
+  
+      > .el-menu-item {
+        border-bottom: none !important;
+        padding: 0px;
+  
+        &:hover,
+        &.is-active {
+          border-bottom: none;
+          background-color: #f4f4f4;
+          color: black;
+          border-top: 2px solid #565a5c;
+        }
+      }
+    }
+  }
+  
+  .el-menu--horizontal > .el-menu-item:not(.is-disabled):focus {
+    background-color: #f4f4f4 !important;
+  }
+  
+  .el-menu--horizontal > .el-menu-item:not(.is-disabled):hover {
+    background-color: #f4f4f4 !important;
+  }
+  
+  .el-card {
+    border-radius: 2px !important;
+    border: none !important;
+  }
+  
+  .el-card.is-always-shadow {
+    box-shadow: 0 1px 3px 0 rgba(26, 26, 26, 0.1) !important;
+  }
+  
+  .text-danger {
+    color: red;
+  }
+  
+  .icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  }
+  
+  .box-card {
+    margin-bottom: 15px;
+  }
+  
+  .img-logo {
+    border-radius: 10px;
+  }
+  
+  .logo-name {
+    color: rgb(22, 159, 197) !important;
+  }
+  
+  /* 字体图标 */
+  
+  i.el-icon-question {
+    color: #ccc;
+  }
+  
+  // pool数据统计样式
+  .mine-stats {
+    margin-bottom: 15px;
+  }
+  
+  .mine-stats .box-card {
+    min-height: 185px;
+  }
+  
+  .mine-stats .item-name {
+    height: 40px;
+    color: #9d9d9d;
+    font-weight: 500;
+  }
+  
+  .mine-stats .item-detail {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .mine-stats .item-unit {
+    font-size: 16px;
+    font-weight: normal;
+  }
+  
+  // 矿池页面
+  .miner-list-container .aside .el-card__body {
+    padding: 0px !important;
+  }
+  
+  // chrome 自动填充背景色
+  input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px white inset;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+  }
+  
+  .el-form-item {
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .auth-header {
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+  
+    .auth-background {
+      background-color: rgb(22, 159, 197);
+  
+      .auth-container {
+        margin-top: 100px;
+      }
+  
+      .auth-body {
+        width: 400px;
+        margin: 0 auto;
+        border-radius: 4px;
+        box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+        padding: 40px;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .auth-container {
+      padding: 10px 20px;
+      .auth-header {
+        display: none;
+      }
+    }
+  }
+  
+  .switch-link {
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-size: 13px;
+    color: #666;
+    padding: 10px 0;
+  }
+  
+  .login-button {
+    color: #409eff;
+  }
+  
+  .area-code {
+    width: 90px !important;
+  }
+  
+  // 用户界面title
+  .title-item {
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 8px;
+    line-height: 30px;
+  }
+  
+  // 注释
+  .annotation {
+    ul {
+      margin-top: 10px;
+      color: #666666;
+      li {
+        padding: 5px 0;
+        font-size: 13px;
+      }
+    }
+  }
+  
+  // 添加子账户和观察者按钮
+  .add-account {
+    text-align: right;
+    margin: 30px 0;
+  }
+  
+  // 状态切换
+  .status-btn {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: right;
+  }
+  
+  @media (max-width: 768px) {
+    .el-message {
+      width: 320px !important;
+    }
+  }
+  
+  .status-color {
+    .color-success {
+      color: #67c23a;
+    }
+    .color-danger {
+      color: #f56c6c;
+    }
+    .color-info {
+      color: #aaa;
+    }
+  }
+  
+  .contract-column {
+    .left {
+      padding-top: 35px;
+      padding-bottom: 15px;
+      font-size: 22px;
+      font-weight: 400;
+    }
+    .right {
+      padding-top: 35px;
+      padding-bottom: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contract-column {
+      .left {
+        padding: 35px 20px 15px 20px !important;
+      }
+    }
+  }
+  // 矿机列表页面币种按钮样式
+  .btn-all,
+  .btn-info {
+    margin: 5px 20px 5px 0px;
+    cursor: pointer;
+    height: 32px;
+    display: inline-block;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    min-width: 58px;
+    text-align: center;
+    padding: 0 10px;
+    line-height: 32px;
+    font-size: 14px;
+  }
+  .btn-all:hover,
+  .btn-info:hover{
+    background-color: #ecf5ff;
+    color: #409eff;
+    border-color: #c6e2ff;
+  }
+  .btn-all.active,
+  .btn-info.active {
+    background-color: #409eff;
+    color: #fff;
+  }
+  
+  // 邮箱，谷歌，手机按钮样式
+  .verifyBtn {
+    display: inline-block;
+    padding: 0 15px;
+    border-right: 1px solid #dcdfe6;
+    line-height: 1;
+    cursor: pointer;
+    &:last-child {
+      border: none;
+    }
+    &:hover {
+      color: #00aad3;
+    }
+  }
+  .isActive {
+    color: #00aad3;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+  }
+  
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.45);
+    transition: color 0.2s ease;
+  }
+  
