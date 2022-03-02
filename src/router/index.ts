@@ -1,17 +1,18 @@
 /*
  * @Author: your name
  * @Date: 2022-02-17 17:28:01
- * @LastEditTime: 2022-02-21 14:23:26
+ * @LastEditTime: 2022-03-02 10:13:33
  * @LastEditors: your name
  * @Description: 路由元文件
- * @FilePath: \algoPlatform\src\router\index.ts
+ * @FilePath: \home-page\src\router\index.ts
  * 可以输入预定的版权声明、个性签名、空行等
  */
-import { App } from 'vue';
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 import { PageEnum } from '../enums/pageENum';
 const Layout = () => import('../views/layout/Layout.vue') 
 const Dashboard = () => import('../views/dashboard/index.vue')
+const Market = () => import('../views/cloud/index.vue')
+const Host = () => import('../views/host/index.vue')
 export const RootRoute: RouteRecordRaw = {
     path: '/',
     name: 'Root',
@@ -22,10 +23,21 @@ export const RootRoute: RouteRecordRaw = {
     },
     children:[
       {
-        path: '',
+        path: '/',
         component: Dashboard,
         name: 'Dashboard'
       },
+      {
+        path: 'list',
+        component: Market,
+        name: 'Market'
+      },
+      {
+        path: 'host',
+        component: Host,
+        name: 'Host'
+      },        
+
   ]
   };
 export const LoginRoute: RouteRecordRaw = {

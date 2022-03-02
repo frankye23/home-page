@@ -1,7 +1,7 @@
 <!--
  * @Author: yedaf
  * @Date: 2022-02-21 14:33:57
- * @LastEditTime: 2022-02-22 13:51:12
+ * @LastEditTime: 2022-03-02 10:58:14
  * @LastEditors: your name
  * @Description: 导航栏组件
 -->
@@ -9,9 +9,14 @@
     <div class="navbar-container">
         <el-menu :default-active="active" mode="horizontal" class="web-show">
             <!-- 首页 -->
-            <el-menu-item index="/">
-                <router-link to="/" class="main-menu-link">
-                    <span>首页</span>
+            <el-menu-item index="/list">
+                <router-link to="/list" class="main-menu-link">
+                    <span>第一选项</span>
+                </router-link>
+            </el-menu-item>
+            <el-menu-item index="/host">
+                <router-link to="/host" class="main-menu-link">
+                    <span>第二选项</span>
                 </router-link>
             </el-menu-item>
             <el-menu-item index="/login">
@@ -94,7 +99,6 @@ const active = ref('')
     color: #303133;
 }
 
-
 .el-menu--horizontal {
     border: none !important;
 }
@@ -102,5 +106,4 @@ const active = ref('')
 .personal-center {
     float: right !important;
 }
-
 </style>

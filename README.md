@@ -1,7 +1,7 @@
 <!--
  * @Author: yedaf
  * @Date: 2022-02-22 10:45:27
- * @LastEditTime: 2022-02-22 10:59:44
+ * @LastEditTime: 2022-03-01 16:59:34
  * @LastEditors: your name
  * @Description: readme 文档
  * @FilePath: \home-page\README.md
@@ -12,7 +12,8 @@
 I use official template Vue 3 + Typescript to build .The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
 # Other techs
-element-plus + vue-router + vuex + vue-i18n 
+
+element-plus + vue-router + vuex + vue-i18n
 
 ## Recommended IDE Setup
 
@@ -35,6 +36,4 @@ npm install
 npm run dev
 ```
 
-This will automatically open http://localhost:3000/.
-
-
+This will automatically open <http://localhost:3000/>.
